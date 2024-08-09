@@ -9,6 +9,10 @@ header {
   background-color: #1c3a53;
 }
 
+.addBg {
+  background-color: antiquewhite;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -25,6 +29,10 @@ header {
   filter: invert(1);
 }
 
+.logo.invert img {
+  filter: invert(0);
+}
+
 .menu ul {
   display: flex;
   list-style: none;
@@ -39,7 +47,8 @@ header {
   transition: ease all 0.5s;
 }
 
-.menu ul li a:hover {
+.menu ul li a:hover,
+.menu ul li a.active {
   background-color: #2c9c5e;
   color: #1c3a53;
 }

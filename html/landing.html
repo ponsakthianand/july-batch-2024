@@ -6,19 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing</title>
   <link rel="stylesheet" href="./css/landing.css">
+  <script src="./js/script.js"></script>
+
 </head>
 
 <body>
-
   <header>
+    <button onclick="changeLogoFilter()">click</button>
     <div class="container">
       <div class="fullHead">
-        <div class="logo">
+        <div id="invertLogo" class="logo">
           <img src="./images/logo.png" width="100px">
         </div>
         <div class="menu">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#" id="menu" onclick="activeFunction()" onblur="deactiveFunction()">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Program</a></li>
             <li><a href="#">Forum</a></li>
@@ -26,7 +28,7 @@
           </ul>
         </div>
         <div class="icons">
-          <div>O</div>
+          <div id="iconClick">O</div>
           <div>8</div>
         </div>
       </div>
@@ -78,7 +80,10 @@
       </div>
     </div>
   </about>
-
+  <script>
+    const element = document.getElementById("iconClick")
+    element.innerHTML = "hi"
+  </script>
 </body>
 
 </html>
