@@ -6,3 +6,57 @@
   width: 1200px;
   margin: 0 auto;
 }
+
+.userPage {
+  display: flex;
+}
+
+.usersSection {
+  height: 680px;
+}
+
+.userBox {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #ccc;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+.userBox:hover,
+.userBox.active {
+  background-color: aliceblue;
+}
+
+.userhead {
+  display: flex;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.image {
+  margin-right: 10px;
+  border-radius: 50%;
+  background: beige;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #ccc;
+}
