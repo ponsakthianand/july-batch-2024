@@ -13,8 +13,8 @@ const App = () => {
   const [isCompanySwich, setIsCompanySwich] = useState(false)
   const [userInfo, setUserInfo] = useState(null)
 
-  const newCompanyName = (value) => {
-    setCompanyName(value)
+  const newCompanyName = (name) => {
+    setCompanyName(name)
   }
 
   const users = [
@@ -71,16 +71,18 @@ const App = () => {
 
   return (
     <div className='wrapper'>
-      <Header companyName={companyName} loggedIn={isCompanySwich} updateCompanyName={(value) => newCompanyName(value)} />
+      <Header companyName={companyName} loggedIn={isCompanySwich}
+        updateCompanyName={(value) => newCompanyName(value)}
+        setIsCompanySwich={(value) => setIsCompanySwich(value)} />
       <div className='container'>
-        {/* <button onClick={() => setIsCompanySwich(false)}>Google</button> <button onClick={() => setIsCompanySwich(true)}>HCL</button> */}
         {/* <div className="welcome">{welcomeMessage}</div> */}
 
         <div className='userPage'>
           <div className='usersSection'>
             {
               users?.length ? users?.map((user, index) => {
-                return <div className={`userBox ${userInfo?.email === user.email ? 'active' : ''}`} key={index} onClick={() => viewUserInfo(user)}>
+                return <div className={`userBox ${userInfo?.email === user.email ? 'active' : ''}`} key={index}
+                  onClick={() => viewUserInfo(user)}>
                   <div className='userhead'>
                     <div className='image'>{user?.gender === 'male' ? <FaMale size={30} /> : <FaFemale size={30} />}</div>
                     <div>

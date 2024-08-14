@@ -1,6 +1,11 @@
 import logo from '../logo.svg';
 
-const Header = ({ companyName, loggedIn, updateCompanyName }) => {
+const Header = ({
+  companyName,
+  loggedIn,
+  updateCompanyName,
+  setIsCompanySwich,
+}) => {
   const newCompanyName = 'HCL';
 
   return (
@@ -12,6 +17,8 @@ const Header = ({ companyName, loggedIn, updateCompanyName }) => {
         width={'100px'}
         onClick={() => updateCompanyName(newCompanyName)}
       />
+      <button onClick={() => setIsCompanySwich(false)}>Google</button>
+      <button onClick={() => setIsCompanySwich(true)}>HCL</button>
     </div>
   );
 };
